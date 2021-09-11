@@ -7,14 +7,14 @@ class CircleTest {
 
     @ParameterizedTest
     @CsvSource({"0, 0", "1, 3.14", "123.12, 47621.94"})
-    void square_valid_radius_values(double radius, double result) {
+    void getAreaValid_RadiusValues(double radius, double result) {
         Circle circle = new Circle(radius);
-        assertEquals(result, circle.square(), 0.01);
+        assertEquals(result, circle.getArea(), 0.01);
     }
 
     @ParameterizedTest
     @CsvSource({"-0.0000001", "-1", "-9999999"})
-    void square_invalid_radius_values(double radius) {
+    void getAreaInvalidRadiusValues(double radius) {
         Throwable thrown = assertThrows(IllegalArgumentException.class, () ->
             new Circle(radius)
         );

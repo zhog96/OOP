@@ -1,3 +1,3 @@
 public interface Figure {
-    double square();
+    double getArea();
 }

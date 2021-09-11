@@ -7,14 +7,14 @@ class RectangleTest {
 
     @ParameterizedTest
     @CsvSource({"0, 1, 0", "1, 0, 0", "1, 1, 1", "11.11, 10.10, 112.211", "10.10, 11.11, 112.211"})
-    void square_valid_radius_values(double width, double height, double result) {
+    void getAreaValidRadiusValues(double width, double height, double result) {
         Rectangle rectangle = new Rectangle(width, height);
-        assertEquals(result, rectangle.square(), 0.01);
+        assertEquals(result, rectangle.getArea(), 0.01);
     }
 
     @ParameterizedTest
     @CsvSource({"-0.0001, 0", "0, -1", "1, -1", "-1, 1", "-99999, -99999"})
-    void square_invalid_radius_values(double width, double height) {
+    void getAreaInvalidRadiusValues(double width, double height) {
         Throwable thrown = assertThrows(IllegalArgumentException.class, () ->
             new Rectangle(width, height)
         );

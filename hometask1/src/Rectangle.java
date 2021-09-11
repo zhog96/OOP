@@ -13,7 +13,7 @@ public class Rectangle implements Figure {
     }
 
     @Override
-    public double square() {
+    public double getArea() {
         return width * height;
     }
 }
