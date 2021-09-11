@@ -1,4 +1,4 @@
-public class Rectangle implements Figure {
+public class Rectangle extends Figure {
 
     private double width, height;
 

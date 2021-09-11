@@ -1,3 +1,3 @@
-public interface Figure {
-    double getArea();
+public abstract class Figure {
+    public abstract double getArea();
 }

@@ -1,4 +1,4 @@
-public class Circle implements Figure {
+public class Circle extends Figure {
 
     private double radius;
 
