@@ -7,7 +7,7 @@ class CircleTest {
 
     @ParameterizedTest
     @CsvSource({"0, 0", "1, 3.14", "123.12, 47621.94"})
-    void getAreaValid_RadiusValues(double radius, double result) {
+    void getAreaValidRadiusValues(double radius, double result) {
         Circle circle = new Circle(radius);
         assertEquals(result, circle.getArea(), 0.01);
     }
