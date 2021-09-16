@@ -1,6 +1,6 @@
 package com.figures;
 
-public class Rectangle extends Figure {
+public class Rectangle implements Figure {
 
     private final double width, height;
 

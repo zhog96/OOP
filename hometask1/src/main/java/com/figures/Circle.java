@@ -1,6 +1,6 @@
 package com.figures;
 
-public class Circle extends Figure {
+public class Circle implements Figure {
 
     private final double radius;
 
