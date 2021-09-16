@@ -1,6 +1,8 @@
+package com.figures;
+
 public class Rectangle extends Figure {
 
-    private double width, height;
+    private final double width, height;
 
     public Rectangle(double width, double height) {
         if (width < 0 || height < 0) {
@@ -13,7 +15,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return width * height;
     }
 }

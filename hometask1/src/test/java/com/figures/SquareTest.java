@@ -1,3 +1,5 @@
+package com.figures;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -7,14 +9,14 @@ class SquareTest {
 
     @ParameterizedTest
     @CsvSource({"0, 0", "1, 1", "123.12, 15158.53"})
-    void getAreaValidRadiusValues(double side, double result) {
+    void shouldCalculateArea(double side, double result) {
         Square square = new Square(side);
-        assertEquals(result, square.getArea(), 0.01);
+        assertEquals(result, square.calculateArea(), 0.01);
     }
 
     @ParameterizedTest
     @CsvSource({"-0.0000001", "-1", "-9999999"})
-    void getAreaInvalidRadiusValues(double side) {
+    void shouldThrowExceptionCalculatingArea(double side) {
         Throwable thrown = assertThrows(IllegalArgumentException.class, () ->
             new Square(side)
         );

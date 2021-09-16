@@ -1,6 +1,8 @@
+package com.figures;
+
 public class Circle extends Figure {
 
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         if (radius < 0) {
@@ -12,7 +14,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * Math.pow(radius, 2);
     }
 }
